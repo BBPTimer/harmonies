@@ -1,0 +1,21 @@
+body {
+  font-family: "Barriecito", system-ui;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  border: 1px solid gray;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+th,
+td {
+  margin: 5px;
+  padding: 5px;
+  text-align: center;
+}

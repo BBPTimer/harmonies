@@ -1,7 +1,8 @@
 import "./App.css";
+import Scoresheet from "./components/Scoresheet";
 
 function App() {
-  return <></>;
+  return <Scoresheet />;
 }
 
 export default App;

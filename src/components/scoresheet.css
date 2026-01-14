@@ -1,0 +1,124 @@
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  gap: 5px 0px;
+}
+
+.name {
+  grid-column: span 2 / span 2;
+}
+
+.trees-icon {
+  grid-column-start: 1;
+  grid-row-start: 2;
+}
+
+.trees-input {
+  grid-column-start: 1;
+  grid-row-start: 3;
+}
+
+.mountains-icon {
+  grid-column-start: 1;
+  grid-row-start: 4;
+}
+
+.mountains-input {
+  grid-column-start: 1;
+  grid-row-start: 5;
+}
+
+.fields-icon {
+  grid-column-start: 1;
+  grid-row-start: 6;
+}
+
+.fields-input {
+  grid-column-start: 1;
+  grid-row-start: 7;
+}
+
+.buildings-icon {
+  grid-column-start: 1;
+  grid-row-start: 8;
+}
+
+.buildings-input {
+  grid-column-start: 1;
+  grid-row-start: 9;
+}
+
+.water-icon {
+  grid-column-start: 1;
+  grid-row-start: 10;
+}
+
+.water-input {
+  grid-column-start: 1;
+  grid-row-start: 11;
+}
+
+.tokens-total {
+  grid-column-start: 1;
+  grid-row-start: 12;
+}
+
+.cubes-icon {
+  grid-column-start: 2;
+  grid-row-start: 2;
+}
+
+.cubes-input-1 {
+  grid-column-start: 2;
+  grid-row-start: 3;
+}
+
+.cubes-input-2 {
+  grid-column-start: 2;
+  grid-row-start: 4;
+}
+
+.cubes-input-3 {
+  grid-column-start: 2;
+  grid-row-start: 5;
+}
+
+.cubes-input-4 {
+  grid-column-start: 2;
+  grid-row-start: 6;
+}
+
+.cubes-input-5 {
+  grid-column-start: 2;
+  grid-row-start: 7;
+}
+
+.cubes-input-6 {
+  grid-column-start: 2;
+  grid-row-start: 8;
+}
+
+.cubes-input-7 {
+  grid-column-start: 2;
+  grid-row-start: 9;
+}
+
+.cubes-input-8 {
+  grid-column-start: 2;
+  grid-row-start: 10;
+}
+
+.cubes-input-9 {
+  grid-column-start: 2;
+  grid-row-start: 11;
+}
+
+.cubes-total {
+  grid-column-start: 2;
+  grid-row-start: 12;
+}
+
+.game-total {
+  grid-column: span 2 / span 2;
+}

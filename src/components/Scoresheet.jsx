@@ -43,7 +43,11 @@ const Scoresheet = ({ name }) => {
           <td rowSpan="2">
             <Icon sx={{ color: "green" }}>forest</Icon>
             <br />
-            <NumberField value={forestPoints} callback={setForestPoints} />
+            <NumberField
+              value={forestPoints}
+              callback={setForestPoints}
+              tabIndex={"1"}
+            />
           </td>
           <td>
             <Icon sx={{ color: "lightgray" }}>square</Icon>
@@ -64,7 +68,11 @@ const Scoresheet = ({ name }) => {
           <td rowSpan="2">
             <Icon sx={{ color: "gray" }}>landscape</Icon>
             <br />
-            <NumberField value={mountainPoints} callback={setMountainPoints} />
+            <NumberField
+              value={mountainPoints}
+              callback={setMountainPoints}
+              tabIndex={"2"}
+            />
           </td>
           <td>
             <NumberField
@@ -89,7 +97,11 @@ const Scoresheet = ({ name }) => {
           <td rowSpan="2">
             <Icon sx={{ color: "gold" }}>local_florist</Icon>
             <br />
-            <NumberField value={fieldsPoints} callback={setFieldsPoints} />
+            <NumberField
+              value={fieldsPoints}
+              callback={setFieldsPoints}
+              tabIndex={"3"}
+            />
           </td>
           <td>
             <NumberField
@@ -117,6 +129,7 @@ const Scoresheet = ({ name }) => {
             <NumberField
               value={buildingsPoints}
               callback={setBuildingsPoints}
+              tabIndex={"4"}
             />
           </td>
           <td>
@@ -142,7 +155,11 @@ const Scoresheet = ({ name }) => {
           <td rowSpan="2">
             <Icon sx={{ color: "blue" }}>water</Icon>
             <br />
-            <NumberField value={waterPoints} callback={setWaterPoints} />
+            <NumberField
+              value={waterPoints}
+              callback={setWaterPoints}
+              tabIndex={"5"}
+            />
           </td>
           <td>
             <NumberField

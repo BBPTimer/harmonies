@@ -1,6 +1,6 @@
 import { OutlinedInput } from "@mui/material";
 
-const NumberField = ({ value, callback, array, index }) => {
+const NumberField = ({ value, callback, array, index, tabIndex }) => {
   const updateValue = (newValue) => {
     if (array) {
       const nextCubePoints = array.map((c, i) => {
@@ -30,6 +30,7 @@ const NumberField = ({ value, callback, array, index }) => {
           pattern: "[0-9]*",
           min: "0",
           max: "50",
+          tabIndex: tabIndex,
         },
       }}
       sx={{ fontFamily: "Barriecito", width: "65px" }}

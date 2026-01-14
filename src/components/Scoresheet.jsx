@@ -16,7 +16,12 @@ const Scoresheet = ({ name }) => {
     parseInt(buildingsPoints) +
     parseInt(waterPoints);
 
-  let cubesTotal = 0;
+  const [cubePoints, setCubePoints] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+
+  const cubesTotal = cubePoints.reduce(
+    (accumulator, currentValue) => accumulator + parseInt(currentValue),
+    0
+  );
 
   return (
     <table>
@@ -38,7 +43,14 @@ const Scoresheet = ({ name }) => {
           </td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[0]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={0}
+            />
+          </td>
         </tr>
         <tr>
           <td rowSpan="2">
@@ -46,10 +58,24 @@ const Scoresheet = ({ name }) => {
             <br />
             <NumberField value={mountainPoints} callback={setMountainPoints} />
           </td>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[1]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={1}
+            />
+          </td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[2]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={2}
+            />
+          </td>
         </tr>
         <tr>
           <td rowSpan="2">
@@ -57,10 +83,24 @@ const Scoresheet = ({ name }) => {
             <br />
             <NumberField value={fieldsPoints} callback={setFieldsPoints} />
           </td>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[3]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={3}
+            />
+          </td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[4]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={4}
+            />
+          </td>
         </tr>
         <tr>
           <td rowSpan="2">
@@ -71,10 +111,24 @@ const Scoresheet = ({ name }) => {
               callback={setBuildingsPoints}
             />
           </td>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[5]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={5}
+            />
+          </td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[6]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={6}
+            />
+          </td>
         </tr>
         <tr>
           <td rowSpan="2">
@@ -82,17 +136,24 @@ const Scoresheet = ({ name }) => {
             <br />
             <NumberField value={waterPoints} callback={setWaterPoints} />
           </td>
-          <td></td>
+          <td>
+            <NumberField
+              value={cubePoints[7]}
+              callback={setCubePoints}
+              array={cubePoints}
+              index={7}
+            />
+          </td>
         </tr>
         <tr>
           <td></td>
         </tr>
         <tr>
-          <td>{tokensTotal}</td>
-          <td>{cubesTotal}</td>
+          <td style={{textAlign: "right"}}>{tokensTotal + " +"}</td>
+          <td style={{textAlign: "left"}}>{cubesTotal}</td>
         </tr>
         <tr>
-          <td colSpan="2">{tokensTotal + cubesTotal}</td>
+          <td colSpan="2">{"= " + (tokensTotal + cubesTotal)}</td>
         </tr>
       </tbody>
     </table>

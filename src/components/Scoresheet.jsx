@@ -3,23 +3,31 @@ import { useState } from "react";
 import NumberField from "./NumberField";
 
 const Scoresheet = ({ name }) => {
-  const [forestPoints, setForestPoints] = useState(0);
-  const [mountainPoints, setMountainPoints] = useState(0);
-  const [fieldsPoints, setFieldsPoints] = useState(0);
-  const [buildingsPoints, setBuildingsPoints] = useState(0);
-  const [waterPoints, setWaterPoints] = useState(0);
+  const [forestPoints, setForestPoints] = useState("");
+  const [mountainPoints, setMountainPoints] = useState("");
+  const [fieldsPoints, setFieldsPoints] = useState("");
+  const [buildingsPoints, setBuildingsPoints] = useState("");
+  const [waterPoints, setWaterPoints] = useState("");
 
   let tokensTotal =
-    parseInt(forestPoints) +
-    parseInt(mountainPoints) +
-    parseInt(fieldsPoints) +
-    parseInt(buildingsPoints) +
-    parseInt(waterPoints);
+    (parseInt(forestPoints) || 0) +
+    (parseInt(mountainPoints) || 0) +
+    (parseInt(fieldsPoints) || 0) +
+    (parseInt(buildingsPoints) || 0) +
+    (parseInt(waterPoints) || 0);
 
-  const [cubePoints, setCubePoints] = useState([0, 0, 0, 0, 0, 0, 0, 0]);
+  const populateEmptyArray = () => {
+    let array = [];
+    for (let i = 0; i < 8; i++) {
+      array.push("");
+    }
+    return array;
+  };
+
+  const [cubePoints, setCubePoints] = useState(populateEmptyArray);
 
   const cubesTotal = cubePoints.reduce(
-    (accumulator, currentValue) => accumulator + parseInt(currentValue),
+    (accumulator, currentValue) => accumulator + (parseInt(currentValue) || 0),
     0
   );
 
@@ -149,8 +157,8 @@ const Scoresheet = ({ name }) => {
           <td></td>
         </tr>
         <tr>
-          <td style={{textAlign: "right"}}>{tokensTotal + " +"}</td>
-          <td style={{textAlign: "left"}}>{cubesTotal}</td>
+          <td style={{ textAlign: "right" }}>{tokensTotal + " +"}</td>
+          <td style={{ textAlign: "left" }}>{cubesTotal}</td>
         </tr>
         <tr>
           <td colSpan="2">{"= " + (tokensTotal + cubesTotal)}</td>

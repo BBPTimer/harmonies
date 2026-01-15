@@ -1,5 +1,5 @@
 body {
-  background-color: floralwhite;
+  background: linear-gradient(to right, #0b486b, #f56217);
   font-family: "Barriecito", system-ui;
 }
 
@@ -10,8 +10,8 @@ body {
 
 table {
   background-color: white;
-  border: 1px solid lightgray;
   border-radius: 50px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 0px 10px;
   padding: 5px;
 }

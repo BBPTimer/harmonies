@@ -11,7 +11,10 @@ function App() {
       </div>
       <div className="flex">
         <IconButton>
-          <Icon sx={{ color: "darkgray" }} onClick={() => window.location.reload()}>
+          <Icon
+            sx={{ color: "white" }}
+            onClick={() => window.location.reload()}
+          >
             refresh
           </Icon>
         </IconButton>

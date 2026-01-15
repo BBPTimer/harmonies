@@ -23,13 +23,10 @@ const NumberField = ({ value, callback, array, index, tabIndex }) => {
       onChange={(e) => updateValue(e.target.value)}
       type="number"
       required
-      size="small"
       slotProps={{
         input: {
           inputMode: "numeric",
           pattern: "[0-9]*",
-          min: "0",
-          max: "50",
           tabIndex: tabIndex,
         },
       }}

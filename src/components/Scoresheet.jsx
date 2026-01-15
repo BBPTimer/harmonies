@@ -41,7 +41,9 @@ const Scoresheet = ({ name }) => {
       <tbody>
         <tr>
           <td rowSpan="2">
-            <Icon sx={{ color: "green" }}>forest</Icon>
+            <Icon sx={{ color: "green" }}>
+              forest
+            </Icon>
             <br />
             <NumberField
               value={forestPoints}
@@ -50,8 +52,12 @@ const Scoresheet = ({ name }) => {
             />
           </td>
           <td>
-            <Icon sx={{ color: "lightgray" }}>square</Icon>
-            <Icon sx={{ color: "orange" }}>square</Icon>
+            <Icon sx={{ color: "lightgray" }}>
+              square
+            </Icon>
+            <Icon sx={{ color: "orange" }}>
+              square
+            </Icon>
           </td>
         </tr>
         <tr>
@@ -66,7 +72,9 @@ const Scoresheet = ({ name }) => {
         </tr>
         <tr>
           <td rowSpan="2">
-            <Icon sx={{ color: "gray" }}>landscape</Icon>
+            <Icon sx={{ color: "gray" }}>
+              landscape
+            </Icon>
             <br />
             <NumberField
               value={mountainPoints}
@@ -95,7 +103,9 @@ const Scoresheet = ({ name }) => {
         </tr>
         <tr>
           <td rowSpan="2">
-            <Icon sx={{ color: "gold" }}>local_florist</Icon>
+            <Icon sx={{ color: "gold" }}>
+              local_florist
+            </Icon>
             <br />
             <NumberField
               value={fieldsPoints}
@@ -124,7 +134,9 @@ const Scoresheet = ({ name }) => {
         </tr>
         <tr>
           <td rowSpan="2">
-            <Icon sx={{ color: "red" }}>apartment</Icon>
+            <Icon sx={{ color: "red" }}>
+              apartment
+            </Icon>
             <br />
             <NumberField
               value={buildingsPoints}
@@ -153,7 +165,9 @@ const Scoresheet = ({ name }) => {
         </tr>
         <tr>
           <td rowSpan="2">
-            <Icon sx={{ color: "blue" }}>water</Icon>
+            <Icon sx={{ color: "blue" }}>
+              water
+            </Icon>
             <br />
             <NumberField
               value={waterPoints}
